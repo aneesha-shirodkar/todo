@@ -34,7 +34,6 @@ class TodoBuilder extends Component {
         taskActiveCount: activeCount + 1,
       });
       this._inputValue.value = "";
-      //console.log(this.state.items)
     }
   };
 
