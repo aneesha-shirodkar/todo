@@ -12,20 +12,22 @@ const TodoList = (props) => {
         <li key={item.id} className={classes.todoList}>
           {!item.edit ? (
             <div className={classes.view}>
-              <input
-                className={classes.toggleAll}
-                type="checkbox"
-                onClick={() => props.taskCompleteHandler(item.id)}
-              />
-              <label
-                style={{
-                  textDecoration: item.active === 0 ? "line-through" : "none",
-                }}
-                onDoubleClick={() => props.editFlagHandler(item.id)}
-              >
-                {" "}
-                {item.text}
-              </label>
+              <div>
+                <input
+                  className={classes.toggleAll}
+                  type="checkbox"
+                  onClick={() => props.taskCompleteHandler(item.id)}
+                />
+                <label
+                  style={{
+                    textDecoration: item.active === 0 ? "line-through" : "none",
+                  }}
+                  onDoubleClick={() => props.editFlagHandler(item.id)}
+                >
+                  {" "}
+                  {item.text}
+                </label>
+              </div>
               <button onClick={() => props.deleteHandler(item.id)}>
                 Delete
               </button>

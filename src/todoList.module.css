@@ -16,7 +16,8 @@ ul.theList {
 }
 
 .view {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 .toggleAll {
   width: 100px;
